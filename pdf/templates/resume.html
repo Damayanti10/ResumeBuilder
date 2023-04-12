@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body bgcolor="green"><span class="border">
+    <h1>Resume</h1>
+    <h2>Personal information</h2>
+    {% comment %} <h3>Name:  {{user_profile.name}}</h3>
+    <h3>Address:  {{user_profile.address}}</h3>
+    <h3>Date of birth:   {{user_profile.dob}}</h3>
+    <h3>Contact Number:   {{user_profile.phone}}</h3>
+    <h3>Email-id:   {{user_profile.email}}</h3> {% endcomment %}
+    <div class="header">
+        <div class="full-name">
+          <h3> Name: {{user_profile.name}}</h3>
+        </div>
+        <div class="contact-info">
+          <span class="email"></span>
+           <h3> Email: {{user_profile.email}}</h3>
+          <span class="separator"></span>
+          <span class="phone"> </span>
+           <h3> Contact Number: {{user_profile.phone}}</h3>
+           <span class="separator"></span>
+          <span class="dob"> </span>
+           <h3> Date of birth: {{user_profile.dob}}</h3>
+        </div>
+    <hr>
+    <br><hr>
+    <h2>Education</h2>
+    <span class="separator"></span>
+    <h3>College/School:  {{user_profile.college}}</h3>
+    <span class="separator"></span>
+    <h3>Degree:  {{user_profile.degree}}</h3>
+    <span class="separator"></span>
+    <h3>University:  {{user_profile.university}}</h3> 
+    <hr>
+    {% comment %} <div class="about">
+        <span class="position">Education </span>
+        <span class="desc">
+          I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
+        </span>
+      </div> {% endcomment %}
+    <br><hr>
+    <h2>Experience And Skills</h2>
+    <span class="separator"></span>
+    <h3>Past Experience: </h3> <h4> {{user_profile.experience }}</h4>
+    <br><hr>
+    <span class="separator"></span>
+    <h3>Skills:</h3> <h4> {{user_profile.skill}}</h4>
+    <hr>
+    <br><hr>
+    <h2>Summary</h2>
+    <span class="separator"></span>
+    <h3>About Yourself: </h3> <h4> {{user_profile.about_youself}}</h4>
+</span>
+</body>
+</html>
