@@ -37,7 +37,7 @@ def resume(request,id):
     #     'encoding' : "UTF-8"
     # }
     config = pdfkit.configuration(wkhtmltopdf = r"/usr/bin/wkhtmltopdf")
-    pdf = pdfkit.from_string(html,"resume.pdf",config)
+    pdf = pdfkit.from_string(html,"resume.pdf",configuration=config)
     response = HttpResponse(pdf,content_type='application/pdf')
     response['Content-Disposition']='attachment'
     return response
