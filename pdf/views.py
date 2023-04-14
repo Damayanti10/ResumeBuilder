@@ -32,12 +32,11 @@ def resume(request,id):
     user_profile=Profile.objects.get(pk=id)
     template = loader.get_template("resume.html")
     html = template.render({'user_profile': user_profile})
-    # option ={
-    #     'page-size' : 'Letter',
-    #     'encoding' : "UTF-8"
-    # }
-    config = pdfkit.configuration(wkhtmltopdf = r"/usr/bin/wkhtmltopdf")
-    pdf = pdfkit.from_string(html,"resume.pdf",configuration=config)
+    option ={
+        'page-size' : 'Letter',
+        'encoding' : "UTF-8"
+    }
+    pdf = pdfkit.from_string(html,False,option)
     response = HttpResponse(pdf,content_type='application/pdf')
     response['Content-Disposition']='attachment'
     return response
