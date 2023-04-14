@@ -36,7 +36,7 @@ def resume(request,id):
         'page-size' : 'Letter',
         'encoding' : "UTF-8"
     }
-    pdf = pdfkit.from_string(html,option)
+    pdf = pdfkit.from_string(html,False,option)
     response = HttpResponse(pdf,content_type='application/pdf')
     response['Content-Disposition']='attachment'
     return response
